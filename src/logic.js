@@ -1,11 +1,24 @@
+export const ROCK = 'ROCK';
+export const PAPER = 'PAPER';
+export const SCISSORS = 'SCISSORS';
+export const WIN = 'WIN';
+export const LOSE = 'LOSE';
+export const DRAW = 'DRAW';
+
 export const logic = {
-  'rock': {
-    beats: 'scissors'
+  ROCK: {
+    ROCK: DRAW,
+    PAPER: LOSE,
+    SCISSORS: WIN
   },
-  'scissors': {
-    beats: 'paper'
-  },
-  'paper': {
-    beats: 'rock'
+  PAPER: {
+    ROCK: WIN,
+    PAPER: DRAW,
+    SCISSORS: LOSE
+  }, 
+  SCISSORS: {
+    ROCK: LOSE,
+    PAPER: WIN,
+    SCISSORS: DRAW
   }
 }
